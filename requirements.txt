@@ -1,4 +1,4 @@
-pyfunceble-dev
+pyfunceble@raw2sqlalchemy
 wheel
 https://www.mypdns.org/project/view/15/
 https://github.com/dns-test/script-hub
