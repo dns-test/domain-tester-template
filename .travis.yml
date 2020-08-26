@@ -21,7 +21,7 @@ env:
 install:
   # https://www.mypdns.org/source/sh/repository/master/
   - wget -qLO "${TRAVIS_BUILD_DIR}/setup_travis.sh"
-    "${SCRIPT_SOURCE_URI}/a6mqille6347e4ahpn5m/PHID-FILE-ld5eiwr7j6iuupl2haee/setup_travis.sh" &&
+    "https://www.mypdns.com/file/download/5q2b7bj3rwabijjsj7yp/PHID-FILE-spcp4bjq7xvvmpxmnii3/setup_travis.sh" &&
     sudo chmod +x "${TRAVIS_BUILD_DIR}/setup_travis.sh"
   - sudo bash "${TRAVIS_BUILD_DIR}/setup_travis.sh"
 
