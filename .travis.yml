@@ -16,7 +16,15 @@ env:
   - TZ: UTC
   - PYTHON_VERSION: 3.8.5
   - SCRIPT_SOURCE_URI: 'https://raw.githubusercontent.com/dns-test/script-hub/master/'
-  
+  - PYFUNCEBLE_CONFIG_DIR: "${TRAVIS_BUILD_DIR}/.pyfunceble/"
+  - PYFUNCEBLE_OUTPUT_LOCATION: "${TRAVIS_BUILD_DIR}/.pyfunceble/"
+  - PYFUNCEBLE_AUTO_CONFIGURATION: yes
+  - PYFUNCEBLE_DB_CHARSET="${DB_CHARSET}"
+  - PYFUNCEBLE_DB_HOST="${DB_HOST}"
+  - PYFUNCEBLE_DB_NAME="${DB_NAME}"
+  - PYFUNCEBLE_DB_USERNAME="${DB_USERNAME}"
+  - PYFUNCEBLE_DB_PASSWORD="${DB_PASSWORD}"
+  - PYFUNCEBLE_DB_PORT="${DB_PORT}"
 
 install:
   # https://www.mypdns.org/source/sh/repository/master/
