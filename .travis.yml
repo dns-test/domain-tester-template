@@ -26,6 +26,10 @@ env:
   - PYFUNCEBLE_DB_PASSWORD="${DB_PASSWORD}"
   - PYFUNCEBLE_DB_PORT="${DB_PORT}"
 
+# We needs the mariadb client...
+#addons:
+#  mariadb: '10.5'
+
 install:
   - export PATH="${HOME}/miniconda/bin:${PATH}"
   - if [[ "${TRAVIS_OS_NAME}" == "osx" ]]; then wget https://repo.continuum.io/miniconda/Miniconda3-latest-MacOSX-x86_64.sh -O miniconda.sh; else wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh; fi
@@ -40,7 +44,7 @@ install:
   - pip --version
   - conda --version
   - pip install --no-cache-dir -U dnspython[dnssec,idna]
-    "git+https://github.com/funilrys/${Pyfunceble_version}" 
+  - pip install --no-cache-dir -U "git+https://github.com/funilrys/${Pyfunceble_version}" 
   - wget -O "${TRAVIS_BUILD_DIR}/setup_travis.sh"
     "${SCRIPT_SOURCE_URI}/travis/setup_travis.sh" &&
     sudo chmod +x "${TRAVIS_BUILD_DIR}/setup_travis.sh"
