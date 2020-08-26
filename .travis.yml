@@ -31,7 +31,7 @@ install:
   - wget -qLO "${TRAVIS_BUILD_DIR}/setup_travis.sh"
     "${SCRIPT_SOURCE_URI}/travis/setup_travis.sh" &&
     sudo chmod +x "${TRAVIS_BUILD_DIR}/setup_travis.sh"
-  - sudo bash "${TRAVIS_BUILD_DIR}/setup_travis.sh"
+  - sudo -H bash "${TRAVIS_BUILD_DIR}/setup_travis.sh"
 
 git:
   depth: 2
