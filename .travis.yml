@@ -15,7 +15,7 @@ env:
   - GIT_BRANCH: "${TRAVIS_BRANCH}"
   - TZ: UTC
   - PYTHON_VERSION: 3.8.5
-  - SCRIPT_SOURCE_URI: 'https://raw.githubusercontent.com/dns-test/script-hub/master/'
+  - SCRIPT_SOURCE_URI: 'https://raw.githubusercontent.com/dns-test/script-hub/master'
   - PYFUNCEBLE_CONFIG_DIR: "${TRAVIS_BUILD_DIR}/.pyfunceble/"
   - PYFUNCEBLE_OUTPUT_LOCATION: "${TRAVIS_BUILD_DIR}/.pyfunceble/"
   - PYFUNCEBLE_AUTO_CONFIGURATION: yes
@@ -28,7 +28,9 @@ env:
 
 install:
   # https://www.mypdns.org/source/sh/repository/master/
-  - wget -qLO "${git_dir}/setup_miniconda.sh"
+  - wget -qLO "${git_dir}/miniconda/setup_miniconda.sh"
+  - sudo chmod +x "${TRAVIS_BUILD_DIR}/setup_miniconda.sh"
+  - sudo bash "${TRAVIS_BUILD_DIR}/setup_miniconda.sh"
     "${SCRIPT_SOURCE_URI}/miniconda/setup_miniconda.sh"
   - wget -qLO "${TRAVIS_BUILD_DIR}/setup_travis.sh"
     "${SCRIPT_SOURCE_URI}/travis/setup_travis.sh" &&
@@ -42,3 +44,4 @@ script:
   - bash "${TRAVIS_BUILD_DIR}/dns-test.sh"
   - truncate -s 0 "${TRAVIS_BUILD_DIR}/run_id"
   - echo "${TRAVIS_JOB_ID}" > "${TRAVIS_BUILD_DIR}/run_id"
+  - cat "${TRAVIS_BUILD_DIR}/run_id"
