@@ -15,13 +15,13 @@ env:
   - GIT_BRANCH: "${TRAVIS_BRANCH}"
   - TZ: UTC
   - PYTHON_VERSION: 3.8.5
-  - SCRIPT_SOURCE_URI: 'https://www.mypdns.org/source/sh/browse/master'
+  - SCRIPT_SOURCE_URI: 'https://www.mypdns.com/file/download'
   
 
 install:
   # https://www.mypdns.org/source/sh/repository/master/
   - wget -qLO "${TRAVIS_BUILD_DIR}/setup_travis.sh"
-    "${SCRIPT_SOURCE_URI}/travis/setup_travis.sh?view=raw" &&
+    "${SCRIPT_SOURCE_URI}/a6mqille6347e4ahpn5m/PHID-FILE-ld5eiwr7j6iuupl2haee/setup_travis.sh" &&
     sudo chmod +x "${TRAVIS_BUILD_DIR}/setup_travis.sh"
   - sudo bash "${TRAVIS_BUILD_DIR}/setup_travis.sh"
 
