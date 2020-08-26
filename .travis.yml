@@ -16,6 +16,7 @@ env:
   - TZ: UTC
   - PYTHON_VERSION: 3.8.5
   - SCRIPT_SOURCE_URI: 'https://raw.githubusercontent.com/dns-test/script-hub/master'
+  - Pyfunceble_version: 'PyFunceble@raw2sqlalchemy'
   - PYFUNCEBLE_CONFIG_DIR: "${TRAVIS_BUILD_DIR}/.pyfunceble/"
   - PYFUNCEBLE_OUTPUT_LOCATION: "${TRAVIS_BUILD_DIR}/.pyfunceble/"
   - PYFUNCEBLE_AUTO_CONFIGURATION: yes
