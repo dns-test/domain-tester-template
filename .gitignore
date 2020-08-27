@@ -4,3 +4,6 @@ setup_recursor.sh
 setup_miniconda.sh
 setup_travis.sh
 .pyfunceble
+
+# Miniconda
+miniconda.sh
