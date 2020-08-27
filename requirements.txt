@@ -1,8 +1,8 @@
-pyfunceble@raw2sqlalchemy
+pyfunceble-dev
 wheel
-https://www.mypdns.org/project/view/15/
-https://github.com/dns-test/script-hub
 script-hub
-dns-test/script-hub
-https://github.com/Import-External-Sources/pornhosts
+matrix
+pornhosts
+https://www.mypdns.org/project/view/15/
+https://www.mypdns.org/source/sh/repository/master/
 https://github.com/mypdns/matrix
